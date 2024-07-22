@@ -2,7 +2,7 @@ package middlewares
 
 import (
 	"errors"
-	"projectBE23/app/config"
+	"pinjamtani_project/app/config"
 	"strings"
 	"sync"
 	"time"

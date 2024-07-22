@@ -10,7 +10,7 @@ type User struct {
 	Address     string
 }
 
-type DataUserInterface interface {
+type QueryUserInterface interface {
 	CreateAccount(account User) (uint, error)
 	AccountByEmail(email string) (*User, error)
 	AccountById(userid uint) (*User, error)

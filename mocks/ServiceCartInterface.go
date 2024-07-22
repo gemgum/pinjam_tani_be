@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	carts "projectBE23/internal/features/carts"
+	carts "pinjamtani_project/internal/features/carts"
 
 	mock "github.com/stretchr/testify/mock"
 )

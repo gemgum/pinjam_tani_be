@@ -1,4 +1,4 @@
-module projectBE23
+module pinjamtani_project
 
 go 1.21.5
 

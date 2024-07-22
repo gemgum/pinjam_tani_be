@@ -2,7 +2,7 @@ package repository
 
 import (
 	"log"
-	users "projectBE23/internal/features/users"
+	"pinjamtani_project/internal/features/users"
 
 	"gorm.io/gorm"
 )
@@ -11,7 +11,7 @@ type userQuery struct {
 	db *gorm.DB
 }
 
-func New(db *gorm.DB) users.DataUserInterface {
+func NewUserService(db *gorm.DB) users.QueryUserInterface {
 	return &userQuery{
 		db: db,
 	}

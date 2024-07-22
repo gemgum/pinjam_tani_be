@@ -2,17 +2,17 @@ package service_test
 
 import (
 	"errors"
-	"projectBE23/internal/features/Carts/service"
-	carts "projectBE23/internal/features/carts"
-	"projectBE23/mocks"
+	"pinjamtani_project/internal/features/carts"
+	"pinjamtani_project/internal/features/carts/service"
+	"pinjamtani_project/mocks"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
 func TestCreateCart(t *testing.T) {
-	qry := mocks.NewDataCarttInterface(t)
-	srv := service.New(qry)
+	qry := mocks.NewQueryCartInterface(t)
+	srv := service.NewCartService(qry)
 	input := carts.CartEntity{UserID: 1, ProductID: 1, Quantity: 2, TotalPrice: 100000}
 
 	t.Run("Error From Validate", func(t *testing.T) {
@@ -48,8 +48,8 @@ func TestCreateCart(t *testing.T) {
 }
 
 func TestGetAllCart(t *testing.T) {
-	qry := mocks.NewDataCarttInterface(t)
-	srv := service.New(qry)
+	qry := mocks.NewQueryCartInterface(t)
+	srv := service.NewCartService(qry)
 	result := []carts.CartEntity{
 		{
 			CartID:     1,
@@ -72,8 +72,8 @@ func TestGetAllCart(t *testing.T) {
 }
 
 func TestFindById(t *testing.T) {
-	qry := mocks.NewDataCarttInterface(t)
-	srv := service.New(qry)
+	qry := mocks.NewQueryCartInterface(t)
+	srv := service.NewCartService(qry)
 	result := carts.CartEntity{
 		CartID:     1,
 		UserID:     1,
@@ -93,8 +93,8 @@ func TestFindById(t *testing.T) {
 }
 
 func TestUpdateCart(t *testing.T) {
-	qry := mocks.NewDataCarttInterface(t)
-	srv := service.New(qry)
+	qry := mocks.NewQueryCartInterface(t)
+	srv := service.NewCartService(qry)
 
 	t.Run("Success Update Cart", func(t *testing.T) {
 		id := uint(1)
@@ -123,8 +123,8 @@ func TestUpdateCart(t *testing.T) {
 }
 
 func TestDeleteCart(t *testing.T) {
-	qry := mocks.NewDataCarttInterface(t)
-	srv := service.New(qry)
+	qry := mocks.NewQueryCartInterface(t)
+	srv := service.NewCartService(qry)
 
 	t.Run("Success Delete Cart", func(t *testing.T) {
 		id := uint(1)

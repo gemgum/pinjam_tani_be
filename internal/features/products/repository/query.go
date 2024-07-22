@@ -3,8 +3,8 @@ package repository
 import (
 	"errors"
 	"log"
-	products "projectBE23/internal/features/products"
-	"projectBE23/internal/utils"
+	products "pinjamtani_project/internal/features/products"
+	"pinjamtani_project/internal/utils"
 
 	"gorm.io/gorm"
 )
@@ -13,7 +13,7 @@ type productQuery struct {
 	db *gorm.DB
 }
 
-func NewPaymentQuery(db *gorm.DB) products.DataProductInterface {
+func NewPaymentQuery(db *gorm.DB) products.QueryProductInterface {
 	return &productQuery{
 		db: db,
 	}

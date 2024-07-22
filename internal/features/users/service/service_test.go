@@ -2,9 +2,9 @@ package service_test
 
 import (
 	"errors"
-	users "projectBE23/internal/features/users"
-	"projectBE23/internal/features/users/service"
-	"projectBE23/mocks"
+	"pinjamtani_project/internal/features/users"
+	"pinjamtani_project/internal/features/users/service"
+	"pinjamtani_project/mocks"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -12,11 +12,11 @@ import (
 )
 
 func TestRegister(t *testing.T) {
-	mockUserData := new(mocks.DataUserInterface)
+	mockUserData := new(mocks.QueryUserInterface)
 	mockHashService := new(mocks.HashInterface)
 	mockMiddleware := new(mocks.MiddlewaresInterface)
 	mockutils := new(mocks.AccountUtilityInterface)
-	userService := service.New(mockUserData, mockHashService, mockMiddleware, mockutils)
+	userService := service.NewUserService(mockUserData, mockHashService, mockMiddleware, mockutils)
 
 	t.Run("success", func(t *testing.T) {
 		user := users.User{
@@ -167,11 +167,11 @@ func TestRegister(t *testing.T) {
 }
 
 func TestLogin(t *testing.T) {
-	mockUserData := new(mocks.DataUserInterface)
+	mockUserData := new(mocks.QueryUserInterface)
 	mockHashService := new(mocks.HashInterface)
 	mockMiddleware := new(mocks.MiddlewaresInterface)
 	mockutils := new(mocks.AccountUtilityInterface)
-	userService := service.New(mockUserData, mockHashService, mockMiddleware, mockutils)
+	userService := service.NewUserService(mockUserData, mockHashService, mockMiddleware, mockutils)
 
 	t.Run("success", func(t *testing.T) {
 		email := "johndoe@example.com"
@@ -273,11 +273,11 @@ func TestLogin(t *testing.T) {
 }
 
 func TestUpdateProfile(t *testing.T) {
-	mockUserData := new(mocks.DataUserInterface)
+	mockUserData := new(mocks.QueryUserInterface)
 	mockHashService := new(mocks.HashInterface)
 	mockMiddleware := new(mocks.MiddlewaresInterface)
 	mockutils := new(mocks.AccountUtilityInterface)
-	userService := service.New(mockUserData, mockHashService, mockMiddleware, mockutils)
+	userService := service.NewUserService(mockUserData, mockHashService, mockMiddleware, mockutils)
 
 	t.Run("success", func(t *testing.T) {
 		userID := uint(1)
@@ -435,11 +435,11 @@ func TestUpdateProfile(t *testing.T) {
 }
 
 func TestDeleteProfile(t *testing.T) {
-	mockUserData := new(mocks.DataUserInterface)
+	mockUserData := new(mocks.QueryUserInterface)
 	mockHashService := new(mocks.HashInterface)
 	mockMiddleware := new(mocks.MiddlewaresInterface)
 	mockutils := new(mocks.AccountUtilityInterface)
-	userService := service.New(mockUserData, mockHashService, mockMiddleware, mockutils)
+	userService := service.NewUserService(mockUserData, mockHashService, mockMiddleware, mockutils)
 
 	t.Run("success", func(t *testing.T) {
 		userID := uint(1)
@@ -466,11 +466,11 @@ func TestDeleteProfile(t *testing.T) {
 }
 
 func TestGetProfile(t *testing.T) {
-	mockUserData := new(mocks.DataUserInterface)
+	mockUserData := new(mocks.QueryUserInterface)
 	mockHashService := new(mocks.HashInterface)
 	mockMiddleware := new(mocks.MiddlewaresInterface)
 	mockutils := new(mocks.AccountUtilityInterface)
-	userService := service.New(mockUserData, mockHashService, mockMiddleware, mockutils)
+	userService := service.NewUserService(mockUserData, mockHashService, mockMiddleware, mockutils)
 
 	t.Run("success", func(t *testing.T) {
 		userID := uint(1)
@@ -506,11 +506,11 @@ func TestGetProfile(t *testing.T) {
 }
 
 func TestLogout(t *testing.T) {
-	mockUserData := new(mocks.DataUserInterface)
+	mockUserData := new(mocks.QueryUserInterface)
 	mockHashService := new(mocks.HashInterface)
 	mockMiddleware := new(mocks.MiddlewaresInterface)
 	mockutils := new(mocks.AccountUtilityInterface)
-	userService := service.New(mockUserData, mockHashService, mockMiddleware, mockutils)
+	userService := service.NewUserService(mockUserData, mockHashService, mockMiddleware, mockutils)
 
 	t.Run("success", func(t *testing.T) {
 		token := "validToken"

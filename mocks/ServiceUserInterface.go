@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	users "projectBE23/internal/features/users"
+	users "pinjamtani_project/internal/features/users"
 
 	mock "github.com/stretchr/testify/mock"
 )

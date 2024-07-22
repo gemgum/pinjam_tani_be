@@ -3,7 +3,7 @@ package handler
 import (
 	"fmt"
 	"log"
-	payment "projectBE23/internal/features/payments"
+	payment "pinjamtani_project/internal/features/payments"
 
 	"github.com/midtrans/midtrans-go"
 	"github.com/midtrans/midtrans-go/snap"

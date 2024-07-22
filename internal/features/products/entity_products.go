@@ -12,7 +12,7 @@ type ProductsEntity struct {
 	Quantity    int
 }
 
-type DataProductInterface interface {
+type QueryProductInterface interface {
 	Insert(product ProductsEntity) (uint, error)
 	Delete(id uint) error
 	Update(id uint, product ProductsEntity) error

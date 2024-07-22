@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	order "projectBE23/internal/features/orders"
+	order "pinjamtani_project/internal/features/orders"
 
 	mock "github.com/stretchr/testify/mock"
 )

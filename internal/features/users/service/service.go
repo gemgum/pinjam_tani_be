@@ -3,20 +3,20 @@ package service
 import (
 	"errors"
 	"log"
-	"projectBE23/app/middlewares"
-	users "projectBE23/internal/features/users"
-	"projectBE23/internal/utils"
-	"projectBE23/internal/utils/encrypts"
+	"pinjamtani_project/app/middlewares"
+	"pinjamtani_project/internal/features/users"
+	"pinjamtani_project/internal/utils"
+	"pinjamtani_project/internal/utils/encrypts"
 )
 
 type userService struct {
-	userData          users.DataUserInterface
+	userData          users.QueryUserInterface
 	hashService       encrypts.HashInterface
 	middlewareservice middlewares.MiddlewaresInterface
 	accountUtility    utils.AccountUtilityInterface
 }
 
-func New(ud users.DataUserInterface, hash encrypts.HashInterface, mi middlewares.MiddlewaresInterface, au utils.AccountUtilityInterface) users.ServiceUserInterface {
+func NewUserService(ud users.QueryUserInterface, hash encrypts.HashInterface, mi middlewares.MiddlewaresInterface, au utils.AccountUtilityInterface) users.ServiceUserInterface {
 	return &userService{
 		userData:          ud,
 		hashService:       hash,

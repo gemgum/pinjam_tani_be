@@ -4,12 +4,12 @@ import (
 	"errors"
 	"fmt"
 	"log"
-	"projectBE23/app/middlewares"
-	order "projectBE23/internal/features/orders"
-	payment "projectBE23/internal/features/payments"
-	handler "projectBE23/internal/features/payments/handler"
-	datapayment "projectBE23/internal/features/payments/repository"
-	service "projectBE23/internal/features/payments/service"
+	"pinjamtani_project/app/middlewares"
+	order "pinjamtani_project/internal/features/orders"
+	payment "pinjamtani_project/internal/features/payments"
+	"pinjamtani_project/internal/features/payments/handler"
+	datapayment "pinjamtani_project/internal/features/payments/repository"
+	"pinjamtani_project/internal/features/payments/service"
 
 	"github.com/midtrans/midtrans-go/snap"
 	"gorm.io/gorm"
@@ -27,9 +27,9 @@ func NewOrderService(q order.QueryOrderInterface, m middlewares.MiddlewaresInter
 	}
 }
 
-func (o *orderServices) AddOrderItems(orderItemData order.OrderItemEntity, OrderStatus order.OrderStatusEntity) (uint, uint, error) {
+func (o *orderServices) AddOrderItems(orderItemData order.OrderItemEntity, orderStatus order.OrderStatusEntity) (uint, uint, error) {
 	fmt.Println("chart item", orderItemData.CartID)
-	productID, qty, err := o.qry.AddOrderItems(orderItemData, OrderStatus)
+	productID, qty, err := o.qry.AddOrderItems(orderItemData, orderStatus)
 	if err != nil {
 		log.Println("Error Service", err.Error())
 		return 0, 0, err

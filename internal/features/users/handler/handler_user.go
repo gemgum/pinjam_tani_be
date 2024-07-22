@@ -3,9 +3,9 @@ package handler
 import (
 	"log"
 	"net/http"
-	"projectBE23/app/middlewares"
-	users "projectBE23/internal/features/users"
-	"projectBE23/internal/utils/responses"
+	"pinjamtani_project/app/middlewares"
+	"pinjamtani_project/internal/features/users"
+	"pinjamtani_project/internal/utils/responses"
 	"strings"
 
 	"github.com/labstack/echo/v4"
@@ -15,7 +15,7 @@ type UserHandler struct {
 	userService users.ServiceUserInterface
 }
 
-func New(us users.ServiceUserInterface) *UserHandler {
+func NewUserHandler(us users.ServiceUserInterface) *UserHandler {
 	return &UserHandler{
 		userService: us,
 	}

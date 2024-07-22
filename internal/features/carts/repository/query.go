@@ -1,7 +1,7 @@
 package repository
 
 import (
-	carts "projectBE23/internal/features/carts"
+	"pinjamtani_project/internal/features/carts"
 
 	"gorm.io/gorm"
 )
@@ -10,7 +10,7 @@ type cartQuery struct {
 	db *gorm.DB
 }
 
-func New(db *gorm.DB) carts.DataCarttInterface {
+func NewCartData(db *gorm.DB) carts.QueryCartInterface {
 	return &cartQuery{
 		db: db,
 	}

@@ -4,14 +4,14 @@ import (
 	"errors"
 	"log"
 
-	products "projectBE23/internal/features/products"
+	"pinjamtani_project/internal/features/products"
 )
 
 type productService struct {
-	productData products.DataProductInterface
+	productData products.QueryProductInterface
 }
 
-func New(pr products.DataProductInterface) products.ServiceProductInterface {
+func New(pr products.QueryProductInterface) products.ServiceProductInterface {
 	return &productService{
 		productData: pr,
 	}

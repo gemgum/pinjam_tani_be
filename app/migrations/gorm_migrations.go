@@ -1,10 +1,10 @@
 package migrations
 
 import (
-	datacarts "projectBE23/internal/features/carts/repository"
-	dataorder "projectBE23/internal/features/orders/repository"
-	dataproducts "projectBE23/internal/features/products/repository"
-	datausers "projectBE23/internal/features/users/repository"
+	datacarts "pinjamtani_project/internal/features/carts/repository"
+	dataorder "pinjamtani_project/internal/features/orders/repository"
+	dataproducts "pinjamtani_project/internal/features/products/repository"
+	datausers "pinjamtani_project/internal/features/users/repository"
 
 	"gorm.io/gorm"
 )

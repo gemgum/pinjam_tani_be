@@ -2,16 +2,17 @@ package service_test
 
 import (
 	"errors"
-	products "projectBE23/internal/features/products"
-	"projectBE23/internal/features/products/service"
-	"projectBE23/mocks"
+	"pinjamtani_project/internal/features/products"
+	"pinjamtani_project/internal/features/products/service"
+	"pinjamtani_project/mocks"
+
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
 func TestCreateProduct(t *testing.T) {
-	mockProductData := new(mocks.DataProductInterface)
+	mockProductData := new(mocks.QueryProductInterface)
 	productService := service.New(mockProductData)
 
 	t.Run("success", func(t *testing.T) {
@@ -60,7 +61,7 @@ func TestCreateProduct(t *testing.T) {
 }
 
 func TestGetAllProduct(t *testing.T) {
-	mockProductData := new(mocks.DataProductInterface)
+	mockProductData := new(mocks.QueryProductInterface)
 	productService := service.New(mockProductData)
 
 	t.Run("success - get all products", func(t *testing.T) {
@@ -108,7 +109,7 @@ func TestGetAllProduct(t *testing.T) {
 }
 
 func TestGetProductById(t *testing.T) {
-	mockProductData := new(mocks.DataProductInterface)
+	mockProductData := new(mocks.QueryProductInterface)
 	productService := service.New(mockProductData)
 
 	t.Run("success", func(t *testing.T) {
@@ -130,7 +131,7 @@ func TestGetProductById(t *testing.T) {
 }
 
 func TestGetUserProducts(t *testing.T) {
-	mockProductData := new(mocks.DataProductInterface)
+	mockProductData := new(mocks.QueryProductInterface)
 	productService := service.New(mockProductData)
 
 	t.Run("success", func(t *testing.T) {
@@ -157,7 +158,7 @@ func TestGetUserProducts(t *testing.T) {
 }
 
 func TestUpdateProduct(t *testing.T) {
-	mockProductData := new(mocks.DataProductInterface)
+	mockProductData := new(mocks.QueryProductInterface)
 	productService := service.New(mockProductData)
 
 	t.Run("success", func(t *testing.T) {
@@ -246,7 +247,7 @@ func TestUpdateProduct(t *testing.T) {
 }
 
 func TestDeleteProduct(t *testing.T) {
-	mockProductData := new(mocks.DataProductInterface)
+	mockProductData := new(mocks.QueryProductInterface)
 	productService := service.New(mockProductData)
 
 	t.Run("success", func(t *testing.T) {

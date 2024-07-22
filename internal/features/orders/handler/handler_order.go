@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"projectBE23/app/middlewares"
-	order "projectBE23/internal/features/orders"
-	products "projectBE23/internal/features/products"
-	"projectBE23/internal/helper"
+	"pinjamtani_project/app/middlewares"
+	order "pinjamtani_project/internal/features/orders"
+	products "pinjamtani_project/internal/features/products"
+	"pinjamtani_project/internal/helper"
 
 	"github.com/google/uuid"
 	"github.com/labstack/echo/v4"
@@ -15,10 +15,10 @@ import (
 
 type orderHandler struct {
 	srv  order.ServiceOrderInterface
-	pQry products.DataProductInterface
+	pQry products.QueryProductInterface
 }
 
-func NewOrderHandler(s order.ServiceOrderInterface, p products.DataProductInterface) order.HandlerOrderInterface {
+func NewOrderHandler(s order.ServiceOrderInterface, p products.QueryProductInterface) order.HandlerOrderInterface {
 	return &orderHandler{
 		srv:  s,
 		pQry: p,

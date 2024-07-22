@@ -3,7 +3,7 @@ package repository
 import (
 	"fmt"
 	"log"
-	order "projectBE23/internal/features/orders"
+	order "pinjamtani_project/internal/features/orders"
 	"time"
 
 	"gorm.io/gorm"

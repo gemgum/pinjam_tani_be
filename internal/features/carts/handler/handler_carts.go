@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"projectBE23/app/middlewares"
-	carts "projectBE23/internal/features/carts"
-	products "projectBE23/internal/features/products"
-	"projectBE23/internal/utils/responses"
+	"pinjamtani_project/app/middlewares"
+	"pinjamtani_project/internal/features/carts"
+	"pinjamtani_project/internal/features/products"
+	"pinjamtani_project/internal/utils/responses"
 
 	"strconv"
 	"strings"
@@ -20,7 +20,7 @@ type CartHandler struct {
 	productService products.ServiceProductInterface
 }
 
-func New(cr carts.ServiceCartInterface, pr products.ServiceProductInterface) *CartHandler {
+func NewCartHandler(cr carts.ServiceCartInterface, pr products.ServiceProductInterface) *CartHandler {
 	return &CartHandler{
 		cartService:    cr,
 		productService: pr,

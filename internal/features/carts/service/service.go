@@ -2,14 +2,14 @@ package service
 
 import (
 	"errors"
-	carts "projectBE23/internal/features/carts"
+	"pinjamtani_project/internal/features/carts"
 )
 
 type cartService struct {
-	cartData carts.DataCarttInterface
+	cartData carts.QueryCartInterface
 }
 
-func New(cr carts.DataCarttInterface) carts.ServiceCartInterface {
+func NewCartService(cr carts.QueryCartInterface) carts.ServiceCartInterface {
 	return &cartService{
 		cartData: cr,
 	}

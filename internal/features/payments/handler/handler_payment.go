@@ -3,9 +3,9 @@ package handler
 import (
 	"log"
 	"net/http"
-	"projectBE23/app/config"
-	payment "projectBE23/internal/features/payments"
-	"projectBE23/internal/helper"
+	"pinjamtani_project/app/config"
+	payment "pinjamtani_project/internal/features/payments"
+	"pinjamtani_project/internal/helper"
 
 	"github.com/labstack/echo/v4"
 	"github.com/midtrans/midtrans-go"

@@ -8,7 +8,7 @@ type CartEntity struct {
 	TotalPrice uint
 }
 
-type DataCarttInterface interface {
+type QueryCartInterface interface {
 	Insert(cart CartEntity) (CartEntity, error)
 	Delete(id uint) error
 	Update(id uint, cart CartEntity) error

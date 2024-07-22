@@ -2,9 +2,9 @@ package service_test
 
 import (
 	"errors"
-	order "projectBE23/internal/features/orders"
-	"projectBE23/internal/features/orders/service"
-	"projectBE23/mocks"
+	order "pinjamtani_project/internal/features/orders"
+	"pinjamtani_project/internal/features/orders/service"
+	"pinjamtani_project/mocks"
 	"testing"
 	"time"
 

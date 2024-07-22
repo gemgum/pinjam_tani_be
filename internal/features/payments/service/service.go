@@ -2,7 +2,7 @@ package service
 
 import (
 	"log"
-	payment "projectBE23/internal/features/payments"
+	payment "pinjamtani_project/internal/features/payments"
 )
 
 type paymentservice struct {

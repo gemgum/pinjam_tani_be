@@ -1,10 +1,10 @@
 package main
 
 import (
-	"projectBE23/app/config"
-	"projectBE23/app/databases"
-	"projectBE23/app/migrations"
-	"projectBE23/app/routes"
+	"pinjamtani_project/app/config"
+	"pinjamtani_project/app/databases"
+	"pinjamtani_project/app/migrations"
+	"pinjamtani_project/app/routes"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"

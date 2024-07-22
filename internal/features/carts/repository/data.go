@@ -1,7 +1,7 @@
 package repository
 
 import (
-	dataorder "projectBE23/internal/features/orders/repository"
+	dataorder "pinjamtani_project/internal/features/orders/repository"
 
 	"gorm.io/gorm"
 )

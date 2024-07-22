@@ -2,7 +2,7 @@ package databases
 
 import (
 	"fmt"
-	"projectBE23/app/config"
+	"pinjamtani_project/app/config"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

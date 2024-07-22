@@ -1,8 +1,8 @@
 package repository
 
 import (
-	datacarts "projectBE23/internal/features/carts/repository"
-	dataorder "projectBE23/internal/features/orders/repository"
+	datacarts "pinjamtani_project/internal/features/carts/repository"
+	dataorder "pinjamtani_project/internal/features/orders/repository"
 
 	"gorm.io/gorm"
 )
